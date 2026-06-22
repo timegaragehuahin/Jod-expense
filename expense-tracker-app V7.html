@@ -1,0 +1,2688 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>จด - บันทึกรายจ่าย</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="จด">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+  :root {
+    --bg: #FBF9F6;
+    --card: #FFFFFF;
+    --card-soft: #F4F0E9;
+    --ink: #2D2A26;
+    --ink-soft: #8A8377;
+    --line: #EAE4D9;
+
+    --personal: #7C9070;
+    --personal-soft: #E6EBE2;
+    --personal-deep: #5F7355;
+
+    --business: #A8896B;
+    --business-soft: #EFE6DA;
+    --business-deep: #8A6D52;
+
+    --overview: #6B8CAE;
+    --overview-soft: #E3EAF0;
+    --overview-deep: #4F7295;
+
+    --warn: #C9605A;
+    --warn-soft: #F6E2DF;
+
+    --mode: var(--personal);
+    --mode-soft: var(--personal-soft);
+    --mode-deep: var(--personal-deep);
+
+    --radius-lg: 28px;
+    --radius-md: 20px;
+    --radius-sm: 14px;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    margin: 0;
+    font-family: 'Noto Sans Thai', 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    background: var(--bg);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .screen {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    animation: fadeIn 0.25s ease;
+  }
+  .screen.active { display: flex; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .topbar {
+    padding: 22px 20px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .topbar h1 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.2px;
+  }
+  .topbar-actions { display: flex; gap: 8px; }
+  .icon-btn {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    color: var(--ink-soft);
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+  }
+  .icon-btn:active { transform: scale(0.92); }
+
+  .mode-toggle {
+    margin: 14px 20px 6px;
+    background: var(--card-soft);
+    border-radius: 999px;
+    padding: 4px;
+    display: flex;
+    position: relative;
+  }
+  .mode-toggle button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 11px 0;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .mode-toggle button.active { color: #fff; }
+  .mode-slider {
+    position: absolute;
+    top: 4px; left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: var(--mode-deep);
+    border-radius: 999px;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), background 0.3s ease;
+    z-index: 1;
+  }
+  .mode-toggle.business .mode-slider { transform: translateX(100%); }
+
+  .mode-toggle3 {
+    margin: 14px 20px 6px;
+    background: var(--card-soft);
+    border-radius: 999px;
+    padding: 4px;
+    display: flex;
+    position: relative;
+  }
+  .mode-toggle3 button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .mode-toggle3 button.active { color: #fff; }
+  .mode-slider3 {
+    position: absolute;
+    top: 4px; left: 4px;
+    width: calc(33.333% - 2.66px);
+    height: calc(100% - 8px);
+    border-radius: 999px;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), background 0.3s ease;
+    z-index: 1;
+    background: var(--overview-deep);
+  }
+  .mode-toggle3[data-active="0"] .mode-slider3 { transform: translateX(0%); background: var(--overview-deep); }
+  .mode-toggle3[data-active="1"] .mode-slider3 { transform: translateX(100%); background: var(--personal-deep); }
+  .mode-toggle3[data-active="2"] .mode-slider3 { transform: translateX(200%); background: var(--business-deep); }
+
+  .budget-card {
+    margin: 14px 20px 0;
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+  }
+  .budget-card .row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .budget-label {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .budget-amounts {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .budget-amounts b {
+    color: var(--ink);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  .water-track {
+    height: 14px;
+    background: var(--card-soft);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+  }
+  .water-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--mode-deep), var(--mode));
+    transition: width 0.6s cubic-bezier(.4,0,.2,1), background 0.4s ease;
+    position: relative;
+  }
+  .water-fill.warn { background: linear-gradient(90deg, #C9605A, #DD8884); }
+  .water-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.35), transparent 60%);
+  }
+  .budget-sub {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+  .budget-sub.warn-text { color: var(--warn); font-weight: 600; }
+
+  .total-card {
+    margin: 14px 20px 0;
+    background: linear-gradient(135deg, var(--overview-deep), var(--overview));
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+    color: #fff;
+  }
+  .total-label { font-size: 13px; opacity: 0.85; font-weight: 500; }
+  .total-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-top: 6px;
+    letter-spacing: -0.5px;
+  }
+  .total-split {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .total-split-item {
+    flex: 1;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 10px 14px;
+  }
+  .total-split-label { font-size: 11.5px; opacity: 0.85; font-weight: 600; }
+  .total-split-amt { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; margin-top: 2px; }
+
+  .section-label {
+    margin: 26px 20px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-label .link {
+    text-transform: none;
+    font-weight: 600;
+    color: var(--mode-deep);
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+
+  .cat-grid {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .cat-btn {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    min-height: 96px;
+  }
+  .cat-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 3px var(--mode-soft);
+    border-color: var(--mode);
+  }
+  .cat-emoji {
+    font-size: 26px;
+    width: 44px; height: 44px;
+    border-radius: 13px;
+    background: var(--mode-soft);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cat-name {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .recent-list {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .recent-item-wrap {
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .recent-actions {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    display: flex;
+  }
+  .recent-action-btn {
+    width: 56px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+  }
+  .recent-action-btn.edit { background: var(--mode-deep); }
+  .recent-action-btn.delete { background: var(--warn); }
+
+  .recent-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+    z-index: 2;
+    cursor: pointer;
+  }
+  .recent-item.swiped { transform: translateX(-112px); }
+  .recent-icon {
+    width: 38px; height: 38px;
+    border-radius: 11px;
+    background: var(--card-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .recent-info { flex: 1; min-width: 0; }
+  .recent-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .recent-time { font-size: 12px; color: var(--ink-soft); margin-top: 1px; }
+  .recent-amount {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .swipe-hint {
+    margin: -2px 20px 14px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .empty-state {
+    margin: 30px 20px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    padding: 30px 10px;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius-md);
+  }
+
+  .bottom-nav {
+    position: fixed;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
+    z-index: 50;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: var(--ink-soft);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 14px;
+    border-radius: 12px;
+    transition: color 0.2s ease;
+  }
+  .nav-item.active { color: var(--mode-deep); }
+  .nav-item svg { width: 22px; height: 22px; }
+
+  .amount-header {
+    padding: 18px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .back-btn {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .amount-cat-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--mode-soft);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--mode-deep);
+  }
+  .amount-display {
+    margin: 50px 0 6px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .amount-currency {
+    font-size: 22px;
+    color: var(--ink-soft);
+    font-weight: 600;
+    vertical-align: top;
+    margin-right: 4px;
+  }
+  .amount-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -1px;
+  }
+  .amount-hint {
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 30px;
+  }
+  .note-input-wrap {
+    margin: 0 20px 20px;
+  }
+  .note-input {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 13px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .note-input::placeholder { color: var(--ink-soft); }
+
+  .numpad {
+    margin: auto 16px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 16px;
+  }
+  .num-key {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 18px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.1s ease;
+  }
+  .num-key:active { transform: scale(0.93); background: var(--card-soft); }
+  .num-key.func { color: var(--ink-soft); font-size: 16px; font-weight: 700; }
+
+  .confirm-btn {
+    margin: 16px 20px 0;
+    background: var(--mode-deep);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 17px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.12s ease, opacity 0.2s ease;
+  }
+  .confirm-btn:active { transform: scale(0.97); }
+  .confirm-btn:disabled { opacity: 0.35; }
+
+  .delete-btn-full {
+    margin: 10px 20px 0;
+    background: transparent;
+    color: var(--warn);
+    border: 1.5px solid var(--warn-soft);
+    border-radius: var(--radius-md);
+    padding: 15px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .delete-btn-full:active { transform: scale(0.97); background: var(--warn-soft); }
+
+  .success-screen {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+  }
+  .success-circle {
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    background: var(--mode-soft);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+    animation: pop 0.4s cubic-bezier(.34,1.56,.64,1);
+  }
+  @keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .success-circle svg { width: 42px; height: 42px; color: var(--mode-deep); }
+  .success-screen h2 { font-size: 20px; margin: 0 0 6px; }
+  .success-screen p { font-size: 14px; color: var(--ink-soft); margin: 0; }
+  .success-amount {
+    font-family: 'Inter', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    margin: 14px 0;
+  }
+
+  .report-tabs {
+    margin: 16px 20px 0;
+    display: flex;
+    gap: 8px;
+  }
+  .report-tab {
+    flex: 1;
+    text-align: center;
+    padding: 9px 0;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--card-soft);
+    color: var(--ink-soft);
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .report-tab.active { background: var(--mode-deep); color: #fff; }
+
+  .period-nav {
+    margin: 14px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .period-nav button {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--ink-soft);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .period-nav-label {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 130px;
+    text-align: center;
+  }
+
+  .donut-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 22px 0 10px;
+    position: relative;
+  }
+  .donut-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .donut-center .total {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .donut-center .label {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+
+  .legend {
+    margin: 8px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .legend-item:last-child { border-bottom: none; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .legend-name { flex: 1; font-size: 14px; font-weight: 600; }
+  .legend-pct { font-size: 12.5px; color: var(--ink-soft); width: 38px; text-align: right; }
+  .legend-amt {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    width: 70px;
+    text-align: right;
+  }
+
+  .bar-chart {
+    margin: 20px 20px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 130px;
+    padding: 0 4px;
+    gap: 4px;
+  }
+  .bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+  .bar-track {
+    width: 100%;
+    max-width: 28px;
+    height: 90px;
+    background: var(--card-soft);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .bar-fill {
+    width: 100%;
+    background: var(--mode);
+    border-radius: 8px;
+    transition: height 0.6s ease;
+  }
+  .bar-fill.today { background: var(--mode-deep); }
+  .bar-day { font-size: 10.5px; color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
+
+  .settings-group {
+    margin: 0 20px 22px;
+    background: var(--card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+  }
+  .settings-row:last-child { border-bottom: none; }
+  .settings-row-label { font-size: 14.5px; font-weight: 600; }
+  .settings-row-sub { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+  .settings-input {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--mode-deep);
+    border: none;
+    background: transparent;
+    text-align: right;
+    width: 100px;
+  }
+  .toggle-switch {
+    width: 46px; height: 27px;
+    border-radius: 999px;
+    background: var(--card-soft);
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--line);
+    flex-shrink: 0;
+  }
+  .toggle-switch.on { background: var(--mode-deep); border-color: var(--mode-deep); }
+  .toggle-knob {
+    width: 21px; height: 21px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 2px; left: 3px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .toggle-switch.on .toggle-knob { transform: translateX(18px); }
+
+  .offline-badge {
+    margin: 16px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--mode-soft);
+    color: var(--mode-deep);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  .offline-badge svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  .export-btn {
+    width: 100%;
+    background: var(--overview-deep);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 15px;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .export-btn:active { transform: scale(0.98); }
+  .export-toast {
+    margin: 10px 20px 0;
+    background: var(--overview-soft);
+    color: var(--overview-deep);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+  }
+  .export-toast.show { display: block; animation: fadeIn 0.3s ease; }
+
+  /* ===== Export modal ===== */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(45,42,38,0.45);
+    z-index: 100;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .modal-overlay.show { display: flex; animation: fadeIn 0.2s ease; }
+  .modal-sheet {
+    width: 100%;
+    max-width: 420px;
+    background: var(--bg);
+    border-radius: 26px 26px 0 0;
+    padding: 10px 20px calc(24px + env(safe-area-inset-bottom));
+    max-height: 86vh;
+    overflow-y: auto;
+  }
+  .modal-handle {
+    width: 36px; height: 4px;
+    background: var(--line);
+    border-radius: 999px;
+    margin: 6px auto 14px;
+  }
+  .modal-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 4px 14px;
+  }
+  .export-range-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .export-range-opt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    cursor: pointer;
+  }
+  .export-range-opt input { display: none; }
+  .export-range-radio {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .export-range-opt input:checked ~ .export-range-radio {
+    border-color: var(--overview-deep);
+  }
+  .export-range-opt input:checked ~ .export-range-radio::after {
+    content: '';
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--overview-deep);
+  }
+  .export-range-text { display: flex; flex-direction: column; gap: 2px; }
+  .export-range-title { font-size: 14.5px; font-weight: 600; }
+  .export-range-sub { font-size: 12px; color: var(--ink-soft); }
+  .export-sub-picker {
+    display: flex;
+    gap: 8px;
+    margin: -2px 4px 4px 32px;
+  }
+  .export-select {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: var(--ink);
+  }
+  .export-format-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+  }
+  .export-format-btn:active { transform: scale(0.98); }
+  .export-format-icon {
+    font-size: 22px;
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    background: var(--overview-soft);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .export-format-title { font-size: 14px; font-weight: 700; color: var(--ink); }
+  .export-format-sub { font-size: 11.5px; color: var(--ink-soft); margin-top: 2px; line-height: 1.35; }
+  .modal-cancel-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--ink-soft);
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 14px;
+    cursor: pointer;
+  }
+  .export-processing {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 14px;
+    font-size: 13.5px;
+    color: var(--overview-deep);
+    font-weight: 600;
+  }
+  .export-processing.show { display: flex; }
+  .spinner {
+    width: 16px; height: 16px;
+    border: 2.5px solid var(--overview-soft);
+    border-top-color: var(--overview-deep);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .history-filters {
+    margin: 14px 20px 0;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .history-filter-chip {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--card-soft);
+    color: var(--ink-soft);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .history-filter-chip.active { background: var(--mode-deep); color: #fff; }
+  .history-day-label {
+    margin: 20px 20px 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  ::-webkit-scrollbar { display: none; }
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+  <!-- ============ SCREEN 0: LOADING (checking session) ============ -->
+  <div class="screen active" id="screen-loading" style="align-items:center; justify-content:center;">
+    <div class="spinner" style="width:32px; height:32px; border-width:3px;"></div>
+    <p style="margin-top:16px; font-size:13.5px; color:var(--ink-soft);" id="loadingStatusText">กำลังตรวจสอบสถานะเข้าสู่ระบบ...</p>
+    <p id="loadingStuckLink" style="font-size:12.5px; color:var(--overview-deep); margin-top:18px; cursor:pointer; text-decoration:underline; display:none;" onclick="abortToLogin()">ใช้เวลานานกว่าปกติ — กดเพื่อลองเข้าสู่ระบบใหม่</p>
+  </div>
+
+  <!-- ============ SCREEN: LOGIN ============ -->
+  <div class="screen" id="screen-login" style="align-items:center; justify-content:center; text-align:center; padding:0 32px;">
+    <div style="font-size:48px; margin-bottom:18px;">📒</div>
+    <h2 style="font-size:22px; margin:0 0 8px;">จด</h2>
+    <p style="font-size:14px; color:var(--ink-soft); margin:0 0 36px; line-height:1.6;">บันทึกรายจ่ายส่วนตัวและธุรกิจ<br>ข้อมูลซิงค์ผ่าน Google Sheets ของคุณ</p>
+
+    <div id="loginClientIdSetup" style="width:100%;">
+      <input class="note-input" id="loginClientIdInput" placeholder="วาง Google Client ID ที่นี่ (ตั้งค่าครั้งแรกเท่านั้น)" style="font-family:'Inter',sans-serif; font-size:12.5px; margin-bottom:10px; width:100%;">
+      <button class="confirm-btn" style="margin:0; width:100%;" onclick="saveLoginClientId()">บันทึก Client ID</button>
+      <p style="font-size:11.5px; color:var(--ink-soft); margin-top:14px; line-height:1.6;">ดูวิธีสร้าง Client ID ได้ในคู่มือ SETUP-GUIDE.md ที่ให้มาพร้อมไฟล์นี้</p>
+    </div>
+
+    <div id="loginSignInArea" style="width:100%; display:none;">
+      <button class="confirm-btn" style="margin:0; width:100%; background:var(--overview-deep); display:flex; align-items:center; justify-content:center; gap:10px;" onclick="signInWithGoogle()">
+        <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.5 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.5 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-2.1 14.1-5.6l-6.5-5.5C29.6 34.6 26.9 36 24 36c-5.3 0-9.6-3.3-11.3-8l-6.6 5.1C9.6 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.5 5.5C41.5 36.5 44 30.7 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        <span style="font-size:14.5px; font-weight:700; color:#fff;">เข้าสู่ระบบด้วย Google</span>
+      </button>
+      <p id="loginErrorMsg" style="font-size:12.5px; color:var(--warn); margin-top:12px; display:none;"></p>
+      <p style="font-size:11.5px; color:var(--ink-soft); margin-top:18px; cursor:pointer; text-decoration:underline;" onclick="resetLoginClientId()">เปลี่ยน Client ID</p>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-home">
+    <div class="topbar">
+      <h1>สวัสดี 👋</h1>
+      <div class="topbar-actions">
+        <div class="icon-btn" onclick="goTo('screen-history')" title="ประวัติทั้งหมด">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l4 2"/></svg>
+        </div>
+        <div class="icon-btn" onclick="goTo('screen-settings')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="mode-toggle" id="modeToggle">
+      <div class="mode-slider"></div>
+      <button class="active" onclick="setMode('personal')">🏠 ส่วนตัว</button>
+      <button onclick="setMode('business')">💼 ธุรกิจ</button>
+    </div>
+
+    <div class="budget-card">
+      <div class="row-top">
+        <span class="budget-label" id="budgetLabel">งบเดือนนี้ — ส่วนตัว</span>
+        <span class="budget-amounts"><b id="spentAmount">0</b> / <span id="budgetTotal">0</span> ฿</span>
+      </div>
+      <div class="water-track">
+        <div class="water-fill" id="waterFill" style="width: 0%"></div>
+      </div>
+      <div class="budget-sub" id="budgetSub"></div>
+    </div>
+
+    <div class="section-label">แตะเพื่อบันทึกรายจ่าย</div>
+    <div class="cat-grid" id="catGrid"></div>
+
+    <div class="section-label">
+      <span>รายการล่าสุด</span>
+      <span class="link" onclick="goTo('screen-history')">ดูทั้งหมด</span>
+    </div>
+    <div class="swipe-hint">เลื่อนรายการไปทางซ้ายเพื่อแก้ไข/ลบ หรือแตะเพื่อแก้ไข</div>
+    <div class="recent-list" id="recentList"></div>
+  </div>
+
+  <div class="screen" id="screen-amount">
+    <div class="amount-header">
+      <div class="back-btn" onclick="goTo(prevScreen)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+      </div>
+      <div class="amount-cat-chip" id="amountCatChip">🍜 อาหาร</div>
+    </div>
+
+    <div class="amount-display">
+      <span class="amount-currency">฿</span><span class="amount-number" id="amountNumber">0</span>
+    </div>
+    <div class="amount-hint" id="amountHint">ใส่จำนวนเงินที่จ่าย</div>
+
+    <div class="note-input-wrap">
+      <input class="note-input" id="noteInput" placeholder="เพิ่มโน้ต (ไม่บังคับ) เช่น ข้าวเที่ยงกับทีม">
+    </div>
+
+    <div class="numpad">
+      <button class="num-key" onclick="numPress('1')">1</button>
+      <button class="num-key" onclick="numPress('2')">2</button>
+      <button class="num-key" onclick="numPress('3')">3</button>
+      <button class="num-key" onclick="numPress('4')">4</button>
+      <button class="num-key" onclick="numPress('5')">5</button>
+      <button class="num-key" onclick="numPress('6')">6</button>
+      <button class="num-key" onclick="numPress('7')">7</button>
+      <button class="num-key" onclick="numPress('8')">8</button>
+      <button class="num-key" onclick="numPress('9')">9</button>
+      <button class="num-key" onclick="numPress('.')">.</button>
+      <button class="num-key" onclick="numPress('0')">0</button>
+      <button class="num-key func" onclick="numBackspace()">⌫</button>
+    </div>
+
+    <button class="confirm-btn" id="confirmBtn" onclick="confirmExpense()" disabled>บันทึกรายจ่าย</button>
+    <button class="delete-btn-full" id="deleteBtn" style="display:none" onclick="deleteCurrentExpense()">ลบรายการนี้</button>
+  </div>
+
+  <div class="screen success-screen" id="screen-success">
+    <div class="success-circle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h2 id="successTitle">บันทึกแล้ว</h2>
+    <div class="success-amount" id="successAmount">-120 ฿</div>
+    <p id="successCat">อาหาร · ส่วนตัว</p>
+  </div>
+
+  <div class="screen" id="screen-report">
+    <div class="topbar">
+      <h1>รายงาน</h1>
+      <div></div>
+    </div>
+
+    <div class="mode-toggle3" id="reportModeToggle" data-active="0">
+      <div class="mode-slider3"></div>
+      <button class="active" onclick="setReportMode('overview')">📊 รวม</button>
+      <button onclick="setReportMode('personal')">🏠 ส่วนตัว</button>
+      <button onclick="setReportMode('business')">💼 ธุรกิจ</button>
+    </div>
+
+    <div class="report-tabs">
+      <button class="report-tab" onclick="setReportPeriod(this,'week')">สัปดาห์</button>
+      <button class="report-tab active" onclick="setReportPeriod(this,'month')">เดือน</button>
+      <button class="report-tab" onclick="setReportPeriod(this,'year')">ปี</button>
+    </div>
+
+    <div class="period-nav">
+      <button onclick="shiftPeriod(-1)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="period-nav-label" id="periodLabel">มิถุนายน 2026</div>
+      <button onclick="shiftPeriod(1)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div id="overviewTotalWrap"></div>
+
+    <div class="donut-wrap">
+      <svg width="190" height="190" viewBox="0 0 190 190" id="donutSvg"></svg>
+      <div class="donut-center">
+        <div class="total" id="donutTotal">0 ฿</div>
+        <div class="label" id="donutTotalLabel">รวมเดือนนี้</div>
+      </div>
+    </div>
+
+    <div class="legend" id="legendList"></div>
+
+    <div class="section-label" id="trendLabel">แนวโน้มตามช่วงเวลา</div>
+    <div class="bar-chart" id="barChart"></div>
+  </div>
+
+  <div class="screen" id="screen-settings">
+    <div class="topbar">
+      <h1>ตั้งค่า</h1>
+      <div></div>
+    </div>
+
+    <div class="offline-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      ข้อมูลถูกบันทึกในเครื่อง ใช้งานได้แม้ไม่มีเน็ต
+    </div>
+
+    <div class="section-label">ส่งออกข้อมูล</div>
+    <div style="margin: 0 20px;">
+      <button class="export-btn" onclick="openExportModal()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        ส่งออกเป็นไฟล์ Excel (.xlsx)
+      </button>
+      <div class="export-toast" id="exportToast">ส่งออกไฟล์เรียบร้อย — เปิดได้ใน Excel หรืออัปโหลดเข้า Google Sheets</div>
+    </div>
+
+    <!-- ============ EXPORT MODAL ============ -->
+    <div class="modal-overlay" id="exportModal" onclick="if(event.target===this) closeExportModal()">
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <h3 class="modal-title">เลือกช่วงเวลาที่จะส่งออก</h3>
+
+        <div class="export-range-options">
+          <label class="export-range-opt">
+            <input type="radio" name="exportRange" value="all" checked onchange="onExportRangeChange()">
+            <span class="export-range-radio"></span>
+            <span class="export-range-text">
+              <span class="export-range-title">ทั้งหมด</span>
+              <span class="export-range-sub">ทุกรายการที่มีอยู่</span>
+            </span>
+          </label>
+          <label class="export-range-opt">
+            <input type="radio" name="exportRange" value="month" onchange="onExportRangeChange()">
+            <span class="export-range-radio"></span>
+            <span class="export-range-text">
+              <span class="export-range-title">รายเดือน</span>
+              <span class="export-range-sub">ระบุเดือนที่ต้องการ</span>
+            </span>
+          </label>
+          <div class="export-sub-picker" id="monthPicker" style="display:none;">
+            <select class="export-select" id="exportMonthSelect"></select>
+            <select class="export-select" id="exportMonthYearSelect"></select>
+          </div>
+          <label class="export-range-opt">
+            <input type="radio" name="exportRange" value="year" onchange="onExportRangeChange()">
+            <span class="export-range-radio"></span>
+            <span class="export-range-text">
+              <span class="export-range-title">รายปี</span>
+              <span class="export-range-sub">ระบุปีที่ต้องการ</span>
+            </span>
+          </label>
+          <div class="export-sub-picker" id="yearPicker" style="display:none;">
+            <select class="export-select" id="exportYearSelect"></select>
+          </div>
+        </div>
+
+        <div class="section-label" style="margin: 22px 4px 10px;">รูปแบบไฟล์</div>
+        <button class="export-format-btn" onclick="runExport('js')">
+          <div class="export-format-icon">⚡</div>
+          <div class="export-format-text">
+            <div class="export-format-title">ดาวน์โหลดทันที</div>
+            <div class="export-format-sub">เร็ว แต่กราฟวงกลมเป็นรูปภาพ แก้ไขใน Excel ไม่ได้</div>
+          </div>
+        </button>
+        <button class="export-format-btn" onclick="runExport('python')">
+          <div class="export-format-icon">📊</div>
+          <div class="export-format-text">
+            <div class="export-format-title">กราฟวงกลมแบบแก้ไขได้ (แนะนำ)</div>
+            <div class="export-format-sub">ใช้เวลาประมวลผลสักครู่ ได้กราฟจริงของ Excel</div>
+          </div>
+        </button>
+
+        <button class="modal-cancel-btn" onclick="closeExportModal()">ยกเลิก</button>
+      </div>
+    </div>
+
+    <div class="section-label">งบประมาณรายเดือน</div>
+    <div class="settings-group">
+      <div class="settings-row">
+        <div>
+          <div class="settings-row-label">🏠 งบส่วนตัว</div>
+          <div class="settings-row-sub">แจ้งเตือนเมื่อใช้เกิน 90%</div>
+        </div>
+        <input class="settings-input" id="budgetInputPersonal" value="8,000 ฿" onchange="updateBudgetFromInput('personal', this.value)">
+      </div>
+      <div class="settings-row">
+        <div>
+          <div class="settings-row-label">💼 งบธุรกิจ</div>
+          <div class="settings-row-sub">แจ้งเตือนเมื่อใช้เกิน 90%</div>
+        </div>
+        <input class="settings-input" id="budgetInputBusiness" value="15,000 ฿" onchange="updateBudgetFromInput('business', this.value)">
+      </div>
+    </div>
+
+    <div class="section-label">การแจ้งเตือน</div>
+    <div class="settings-group">
+      <div class="settings-row">
+        <div>
+          <div class="settings-row-label">แจ้งเตือนเกินงบ</div>
+          <div class="settings-row-sub">เด้งแจ้งทันทีที่ใช้เกิน 90%</div>
+        </div>
+        <div class="toggle-switch on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+      </div>
+      <div class="settings-row">
+        <div>
+          <div class="settings-row-label">สรุปรายสัปดาห์</div>
+          <div class="settings-row-sub">ทุกวันจันทร์ เวลา 9:00</div>
+        </div>
+        <div class="toggle-switch on" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+      </div>
+      <div class="settings-row">
+        <div>
+          <div class="settings-row-label">เตือนให้บันทึก</div>
+          <div class="settings-row-sub">ถ้ายังไม่จดวันนี้ เตือน 20:00 น.</div>
+        </div>
+        <div class="toggle-switch" onclick="this.classList.toggle('on')"><div class="toggle-knob"></div></div>
+      </div>
+    </div>
+
+    <div class="section-label">จัดการหมวดหมู่</div>
+    <div class="settings-group">
+      <div class="settings-row">
+        <div class="settings-row-label">🏠 แก้ไขหมวดส่วนตัว</div>
+        <span style="color:var(--ink-soft);">›</span>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-label">💼 แก้ไขหมวดธุรกิจ</div>
+        <span style="color:var(--ink-soft);">›</span>
+      </div>
+    </div>
+
+    <div class="section-label">บัญชี</div>
+    <div class="settings-group">
+      <div class="settings-row">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div id="accountAvatar" style="width:36px; height:36px; border-radius:50%; background:var(--overview-soft); display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:var(--overview-deep); overflow:hidden;"></div>
+          <div>
+            <div class="settings-row-label" id="accountEmail">-</div>
+            <div class="settings-row-sub" id="syncStatusLabel">ซิงค์แล้ว</div>
+          </div>
+        </div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-label">ซิงค์ข้อมูลตอนนี้</div>
+        <button class="export-format-btn" style="margin:0; width:auto; padding:8px 16px;" onclick="syncToGoogleSheet(true)">
+          <span style="font-size:13px; font-weight:700;">ซิงค์เลย</span>
+        </button>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-label" style="color:var(--warn);">ออกจากระบบ</div>
+        <button class="export-format-btn" style="margin:0; width:auto; padding:8px 16px; border-color:var(--warn-soft);" onclick="signOutGoogle()">
+          <span style="font-size:13px; font-weight:700; color:var(--warn);">ออกจากระบบ</span>
+        </button>
+      </div>
+    </div>
+    <div class="export-toast" id="gsheetToast"></div>
+
+    <div class="section-label">ข้อมูล</div>
+    <div style="margin: 0 20px;">
+      <button class="delete-btn-full" style="margin:0;" onclick="clearAllData()">ล้างข้อมูลทั้งหมด</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-history">
+    <div class="amount-header" style="padding-bottom: 4px;">
+      <div class="back-btn" onclick="goTo('screen-home')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+      </div>
+      <h1 style="font-size:19px; margin:0;">ประวัติทั้งหมด</h1>
+    </div>
+
+    <div class="history-filters">
+      <button class="history-filter-chip active" onclick="setHistoryFilter(this,'all')">ทั้งหมด</button>
+      <button class="history-filter-chip" onclick="setHistoryFilter(this,'personal')">🏠 ส่วนตัว</button>
+      <button class="history-filter-chip" onclick="setHistoryFilter(this,'business')">💼 ธุรกิจ</button>
+    </div>
+
+    <div class="swipe-hint">เลื่อนรายการไปทางซ้ายเพื่อแก้ไข/ลบ หรือแตะเพื่อแก้ไข</div>
+    <div id="historyContent"></div>
+  </div>
+
+  <div class="bottom-nav">
+    <button class="nav-item active" id="nav-home" onclick="goTo('screen-home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+      หน้าหลัก
+    </button>
+    <button class="nav-item" id="nav-report" onclick="goTo('screen-report')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.1-2.8-2.8L7 14"/></svg>
+      รายงาน
+    </button>
+    <button class="nav-item" id="nav-settings" onclick="goTo('screen-settings')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      ตั้งค่า
+    </button>
+  </div>
+
+</div>
+
+<script>
+  const categories = {
+    personal: [
+      { id: 'food', name: 'อาหาร', emoji: '🍜' },
+      { id: 'transport', name: 'เดินทาง', emoji: '🚗' },
+      { id: 'groceries', name: 'ของใช้', emoji: '🛒' },
+      { id: 'bills', name: 'บิล/ค่าน้ำค่าไฟ', emoji: '🧾' },
+      { id: 'fun', name: 'บันเทิง', emoji: '🎬' },
+      { id: 'health', name: 'สุขภาพ', emoji: '💊' },
+      { id: 'ren', name: 'เร็น', emoji: '🧑' },
+      { id: 'gokart', name: 'Gokart', emoji: '🏎️' },
+      { id: 'travel', name: 'ท่องเที่ยว', emoji: '🧳' },
+      { id: 'other_p', name: 'อื่นๆ', emoji: '✨' },
+    ],
+    business: [
+      { id: 'tools', name: 'Tools & Equipment', emoji: '🛠️' },
+      { id: 'product', name: 'Product', emoji: '📦' },
+      { id: 'logistics', name: 'ขนส่ง', emoji: '🚚' },
+      { id: 'utilities', name: 'ค่าน้ำ ไฟ เน็ต', emoji: '💡' },
+      { id: 'other_b', name: 'อื่นๆ', emoji: '✨' },
+    ]
+  };
+
+  function findCategory(mode, catId) {
+    return categories[mode].find(c => c.id === catId) || { name: catId, emoji: '✨' };
+  }
+
+  const budgets = {
+    personal: { total: 8000 },
+    business: { total: 15000 }
+  };
+
+  let nextId = 1;
+  let transactions = [];
+
+  function clearAllData() {
+    if (!confirm('ล้างข้อมูลรายจ่ายทั้งหมดและตั้งงบประมาณกลับเป็นค่าเริ่มต้น? การกระทำนี้ไม่สามารถย้อนกลับได้ และจะลบข้อมูลใน Google Sheet ของคุณด้วย')) return;
+    transactions = [];
+    nextId = 1;
+    budgets.personal.total = 8000;
+    budgets.business.total = 15000;
+    persistChange();
+    renderCategories();
+    renderRecents();
+    renderBudget();
+    document.getElementById('budgetInputPersonal').value = fmt(budgets.personal.total) + ' ฿';
+    document.getElementById('budgetInputBusiness').value = fmt(budgets.business.total) + ' ฿';
+    if (document.getElementById('screen-history').classList.contains('active')) renderHistory();
+    if (document.getElementById('screen-report').classList.contains('active')) renderReport();
+    showExportToast('ล้างข้อมูลทั้งหมดแล้ว');
+  }
+
+  let currentMode = 'personal';
+  let currentReportMode = 'overview';
+  let currentReportPeriod = 'month';
+  let periodOffset = 0;
+  let selectedCategory = null;
+  let amountStr = '0';
+  let editingId = null;
+  let prevScreen = 'screen-home';
+  let historyFilter = 'all';
+  let swipedItemKey = null;
+
+  const NOW = new Date('2026-06-17T13:00:00');
+
+  function fmt(n) { return Math.round(n).toLocaleString(); }
+  function modeLabel(m) { return m === 'personal' ? 'ส่วนตัว' : 'ธุรกิจ'; }
+
+  function startOfWeek(d) {
+    const dt = new Date(d);
+    const day = dt.getDay() === 0 ? 7 : dt.getDay();
+    dt.setDate(dt.getDate() - (day - 1));
+    dt.setHours(0,0,0,0);
+    return dt;
+  }
+
+  function getPeriodRange(period, offset) {
+    const base = new Date(NOW);
+    if (period === 'month') {
+      const m = new Date(base.getFullYear(), base.getMonth() + offset, 1);
+      const start = new Date(m.getFullYear(), m.getMonth(), 1);
+      const end = new Date(m.getFullYear(), m.getMonth() + 1, 1);
+      return { start, end, label: start.toLocaleDateString('th-TH', { month: 'long', year: 'numeric' }) };
+    }
+    if (period === 'week') {
+      const sow = startOfWeek(base);
+      sow.setDate(sow.getDate() + offset * 7);
+      const end = new Date(sow); end.setDate(end.getDate() + 7);
+      const endDisp = new Date(end); endDisp.setDate(endDisp.getDate() - 1);
+      return { start: sow, end, label: `${sow.getDate()} ${sow.toLocaleDateString('th-TH',{month:'short'})} - ${endDisp.getDate()} ${endDisp.toLocaleDateString('th-TH',{month:'short'})}` };
+    }
+    const y = base.getFullYear() + offset;
+    const start = new Date(y, 0, 1);
+    const end = new Date(y + 1, 0, 1);
+    return { start, end, label: 'ปี ' + y };
+  }
+
+  function txInRange(tx, start, end, modeFilter) {
+    const d = new Date(tx.date);
+    if (d < start || d >= end) return false;
+    if (modeFilter && modeFilter !== 'overview' && tx.mode !== modeFilter) return false;
+    return true;
+  }
+
+  function setMode(mode) {
+    currentMode = mode;
+    document.getElementById('modeToggle').classList.toggle('business', mode === 'business');
+    document.querySelectorAll('#modeToggle button').forEach((b, i) => {
+      b.classList.toggle('active', (i === 0 && mode === 'personal') || (i === 1 && mode === 'business'));
+    });
+    applyModeColors(mode);
+    renderCategories();
+    renderRecents();
+    renderBudget();
+  }
+
+  function applyModeColors(mode) {
+    const root = document.documentElement.style;
+    if (mode === 'business') {
+      root.setProperty('--mode', '#A8896B');
+      root.setProperty('--mode-soft', '#EFE6DA');
+      root.setProperty('--mode-deep', '#8A6D52');
+    } else if (mode === 'overview') {
+      root.setProperty('--mode', '#6B8CAE');
+      root.setProperty('--mode-soft', '#E3EAF0');
+      root.setProperty('--mode-deep', '#4F7295');
+    } else {
+      root.setProperty('--mode', '#7C9070');
+      root.setProperty('--mode-soft', '#E6EBE2');
+      root.setProperty('--mode-deep', '#5F7355');
+    }
+  }
+
+  function goTo(screenId) {
+    const current = document.querySelector('.screen.active');
+    if (current && current.id !== 'screen-amount') prevScreen = current.id;
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(screenId).classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    if (screenId === 'screen-home') { document.getElementById('nav-home').classList.add('active'); applyModeColors(currentMode); }
+    if (screenId === 'screen-report') { document.getElementById('nav-report').classList.add('active'); applyModeColors(currentReportMode); renderReport(); }
+    if (screenId === 'screen-settings') { document.getElementById('nav-settings').classList.add('active'); applyModeColors(currentMode); }
+    if (screenId === 'screen-history') { applyModeColors(currentMode); renderHistory(); }
+  }
+
+  function renderCategories() {
+    const grid = document.getElementById('catGrid');
+    grid.innerHTML = '';
+    categories[currentMode].forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn';
+      btn.innerHTML = `<div class="cat-emoji">${cat.emoji}</div><div class="cat-name">${cat.name}</div>`;
+      btn.onclick = () => openAmountForNew(cat);
+      grid.appendChild(btn);
+    });
+  }
+
+  function renderRecents() {
+    const list = document.getElementById('recentList');
+    list.innerHTML = '';
+    const items = transactions
+      .filter(t => t.mode === currentMode)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 5);
+
+    if (items.length === 0) {
+      list.innerHTML = '<div class="empty-state">ยังไม่มีรายการ — แตะหมวดหมู่ด้านบนเพื่อเริ่มบันทึก</div>';
+      return;
+    }
+    items.forEach(tx => list.appendChild(buildRecentRow(tx)));
+  }
+
+  function buildRecentRow(tx) {
+    const cat = findCategory(tx.mode, tx.catId);
+    const wrap = document.createElement('div');
+    wrap.className = 'recent-item-wrap';
+    wrap.dataset.key = tx.id;
+
+    const dateLabel = formatRelativeDate(tx.date);
+
+    wrap.innerHTML = `
+      <div class="recent-actions">
+        <button class="recent-action-btn edit" onclick="event.stopPropagation(); openAmountForEdit('${tx.id}')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="recent-action-btn delete" onclick="event.stopPropagation(); deleteTransaction('${tx.id}')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+        </button>
+      </div>
+      <div class="recent-item" onclick="handleRecentTap('${tx.id}', this)">
+        <div class="recent-icon">${cat.emoji}</div>
+        <div class="recent-info">
+          <div class="recent-name">${cat.name}${tx.note ? ' · ' + escapeHtml(tx.note) : ''}</div>
+          <div class="recent-time">${dateLabel}</div>
+        </div>
+        <div class="recent-amount">-${fmt(tx.amount)} ฿</div>
+      </div>
+    `;
+    return wrap;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function formatRelativeDate(iso) {
+    const d = new Date(iso);
+    const today = new Date(NOW); today.setHours(0,0,0,0);
+    const dDate = new Date(d); dDate.setHours(0,0,0,0);
+    const diffDays = Math.round((today - dDate) / 86400000);
+    const time = d.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
+    if (diffDays === 0) return `วันนี้ ${time}`;
+    if (diffDays === 1) return `เมื่อวาน ${time}`;
+    return d.toLocaleDateString('th-TH', { day: 'numeric', month: 'short' }) + ' ' + time;
+  }
+
+  function handleRecentTap(id, el) {
+    openAmountForEdit(id);
+  }
+
+  document.addEventListener('touchstart', handleTouchStart, { passive: true });
+  document.addEventListener('touchend', handleTouchEnd, { passive: true });
+  let touchStartX = 0, touchStartY = 0, touchTargetWrap = null;
+  function handleTouchStart(e) {
+    const wrap = e.target.closest('.recent-item-wrap');
+    touchTargetWrap = wrap;
+    if (!wrap) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }
+  function handleTouchEnd(e) {
+    if (!touchTargetWrap) return;
+    const dx = (e.changedTouches[0].clientX - touchStartX);
+    const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+    const wrap = touchTargetWrap;
+    const item = wrap.querySelector('.recent-item');
+    if (dy < 30 && dx < -40) {
+      closeAllSwiped();
+      item.classList.add('swiped');
+      swipedItemKey = wrap.dataset.key;
+    } else if (dy < 30 && dx > 40) {
+      closeAllSwiped();
+    }
+    touchTargetWrap = null;
+  }
+  function closeAllSwiped() {
+    document.querySelectorAll('.recent-item.swiped').forEach(el => el.classList.remove('swiped'));
+    swipedItemKey = null;
+  }
+
+  function renderBudget() {
+    const b = budgets[currentMode];
+    const spent = transactions
+      .filter(t => t.mode === currentMode && isThisMonth(t.date))
+      .reduce((s, t) => s + t.amount, 0);
+    const pct = Math.min(100, Math.round((spent / b.total) * 100));
+    const remain = b.total - spent;
+    document.getElementById('budgetLabel').textContent = `งบเดือนนี้ — ${modeLabel(currentMode)}`;
+    document.getElementById('spentAmount').textContent = fmt(spent);
+    document.getElementById('budgetTotal').textContent = fmt(b.total);
+    const fill = document.getElementById('waterFill');
+    fill.style.width = pct + '%';
+    fill.classList.toggle('warn', pct >= 85);
+    const sub = document.getElementById('budgetSub');
+    if (spent >= b.total) {
+      sub.textContent = `เกินงบไปแล้ว ${fmt(spent - b.total)} ฿`;
+      sub.classList.add('warn-text');
+    } else if (pct >= 85) {
+      sub.textContent = `ใกล้เกินงบ! เหลือ ${fmt(remain)} ฿ (${pct}%)`;
+      sub.classList.add('warn-text');
+    } else {
+      sub.textContent = `เหลือ ${fmt(remain)} ฿ · ใช้ไป ${pct}% ของงบ`;
+      sub.classList.remove('warn-text');
+    }
+  }
+
+  function isThisMonth(iso) {
+    const d = new Date(iso);
+    return d.getFullYear() === NOW.getFullYear() && d.getMonth() === NOW.getMonth();
+  }
+
+  function openAmountForNew(cat) {
+    editingId = null;
+    selectedCategory = cat;
+    amountStr = '0';
+    document.getElementById('amountCatChip').textContent = `${cat.emoji} ${cat.name}`;
+    document.getElementById('amountNumber').textContent = '0';
+    document.getElementById('noteInput').value = '';
+    document.getElementById('confirmBtn').textContent = 'บันทึกรายจ่าย';
+    document.getElementById('confirmBtn').disabled = true;
+    document.getElementById('deleteBtn').style.display = 'none';
+    document.getElementById('amountHint').textContent = 'ใส่จำนวนเงินที่จ่าย';
+    goTo('screen-amount');
+  }
+
+  function openAmountForEdit(id) {
+    closeAllSwiped();
+    const tx = transactions.find(t => t.id === id);
+    if (!tx) return;
+    editingId = id;
+    currentMode = tx.mode;
+    applyModeColors(tx.mode);
+    selectedCategory = findCategory(tx.mode, tx.catId);
+    amountStr = String(tx.amount);
+    document.getElementById('amountCatChip').textContent = `${selectedCategory.emoji} ${selectedCategory.name}`;
+    document.getElementById('amountNumber').textContent = amountStr;
+    document.getElementById('noteInput').value = tx.note || '';
+    document.getElementById('confirmBtn').textContent = 'บันทึกการแก้ไข';
+    document.getElementById('confirmBtn').disabled = false;
+    document.getElementById('deleteBtn').style.display = 'block';
+    document.getElementById('amountHint').textContent = `แก้ไขรายการ · ${modeLabel(tx.mode)}`;
+    goTo('screen-amount');
+  }
+
+  function numPress(digit) {
+    if (digit === '.' && amountStr.includes('.')) return;
+    if (amountStr === '0' && digit !== '.') {
+      amountStr = digit;
+    } else {
+      if (amountStr.includes('.')) {
+        const decimals = amountStr.split('.')[1];
+        if (decimals && decimals.length >= 2) return;
+      }
+      amountStr += digit;
+    }
+    updateAmountDisplay();
+  }
+
+  function numBackspace() {
+    amountStr = amountStr.slice(0, -1);
+    if (amountStr === '' || amountStr === '-') amountStr = '0';
+    updateAmountDisplay();
+  }
+
+  function updateAmountDisplay() {
+    document.getElementById('amountNumber').textContent = amountStr;
+    const val = parseFloat(amountStr);
+    document.getElementById('confirmBtn').disabled = !(val > 0);
+  }
+
+  function confirmExpense() {
+    const val = parseFloat(amountStr);
+    if (!(val > 0)) return;
+    const note = document.getElementById('noteInput').value.trim();
+
+    if (editingId) {
+      const tx = transactions.find(t => t.id === editingId);
+      tx.amount = val;
+      tx.note = note;
+      document.getElementById('successTitle').textContent = 'แก้ไขแล้ว';
+      document.getElementById('successAmount').textContent = `${fmt(val)} ฿`;
+      document.getElementById('successCat').textContent = `${selectedCategory.name} · ${modeLabel(tx.mode)}`;
+    } else {
+      const newTx = {
+        id: 't' + (nextId++),
+        mode: currentMode,
+        catId: selectedCategory.id,
+        note: note,
+        amount: val,
+        date: NOW.toISOString()
+      };
+      transactions.unshift(newTx);
+      document.getElementById('successTitle').textContent = 'บันทึกแล้ว';
+      document.getElementById('successAmount').textContent = `-${fmt(val)} ฿`;
+      document.getElementById('successCat').textContent = `${selectedCategory.name} · ${modeLabel(currentMode)}`;
+    }
+
+    goTo('screen-success');
+    persistChange();
+    renderBudget();
+    renderRecents();
+
+    setTimeout(() => {
+      goTo(prevScreen === 'screen-history' ? 'screen-history' : 'screen-home');
+    }, 1100);
+  }
+
+  function deleteCurrentExpense() {
+    if (!editingId) return;
+    deleteTransaction(editingId, true);
+  }
+
+  function deleteTransaction(id, fromAmountScreen) {
+    const idx = transactions.findIndex(t => t.id === id);
+    if (idx === -1) return;
+    transactions.splice(idx, 1);
+    persistChange();
+    renderBudget();
+    renderRecents();
+    if (document.getElementById('screen-history').classList.contains('active')) renderHistory();
+    if (fromAmountScreen) {
+      goTo(prevScreen === 'screen-history' ? 'screen-history' : 'screen-home');
+    }
+  }
+
+  function setHistoryFilter(btn, filter) {
+    document.querySelectorAll('.history-filter-chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    historyFilter = filter;
+    renderHistory();
+  }
+
+  function renderHistory() {
+    const content = document.getElementById('historyContent');
+    content.innerHTML = '';
+    let items = transactions.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+    if (historyFilter !== 'all') items = items.filter(t => t.mode === historyFilter);
+
+    if (items.length === 0) {
+      content.innerHTML = '<div class="empty-state">ไม่มีรายการในหมวดนี้</div>';
+      return;
+    }
+
+    let lastDay = null;
+    items.forEach(tx => {
+      const d = new Date(tx.date);
+      const dayKey = d.toDateString();
+      if (dayKey !== lastDay) {
+        const label = document.createElement('div');
+        label.className = 'history-day-label';
+        label.textContent = formatDayHeader(d);
+        content.appendChild(label);
+        lastDay = dayKey;
+        const list = document.createElement('div');
+        list.className = 'recent-list';
+        list.dataset.day = dayKey;
+        content.appendChild(list);
+      }
+      content.lastElementChild.appendChild(buildRecentRow(tx));
+    });
+  }
+
+  function formatDayHeader(d) {
+    const today = new Date(NOW); today.setHours(0,0,0,0);
+    const dd = new Date(d); dd.setHours(0,0,0,0);
+    const diff = Math.round((today - dd) / 86400000);
+    if (diff === 0) return 'วันนี้';
+    if (diff === 1) return 'เมื่อวาน';
+    return d.toLocaleDateString('th-TH', { weekday: 'long', day: 'numeric', month: 'long' });
+  }
+
+  function setReportMode(mode) {
+    currentReportMode = mode;
+    const idx = mode === 'overview' ? 0 : mode === 'personal' ? 1 : 2;
+    document.getElementById('reportModeToggle').dataset.active = idx;
+    document.querySelectorAll('#reportModeToggle button').forEach((b, i) => {
+      b.classList.toggle('active', i === idx);
+    });
+    applyModeColors(mode);
+    renderReport();
+  }
+
+  function setReportPeriod(btn, period) {
+    document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    currentReportPeriod = period;
+    periodOffset = 0;
+    renderReport();
+  }
+
+  function shiftPeriod(dir) {
+    periodOffset += dir;
+    renderReport();
+  }
+
+  const palettePersonal = ['#5B764C','#B27D34','#478575','#C07259','#95C07C','#786996','#D1C794','#709FA9','#BDC8B6','#74503E'];
+  const paletteBusiness = ['#83613F','#6D9353','#BF5540','#C0A659','#5C7A8A','#D9B28C'];
+  const paletteOverviewModes = ['#5F7355', '#8A6D52'];
+
+  function renderReport() {
+    const range = getPeriodRange(currentReportPeriod, periodOffset);
+    document.getElementById('periodLabel').textContent = range.label;
+
+    let data;
+    let total;
+    const overviewWrap = document.getElementById('overviewTotalWrap');
+
+    if (currentReportMode === 'overview') {
+      const personalTotal = transactions.filter(t => txInRange(t, range.start, range.end, 'personal')).reduce((s,t)=>s+t.amount,0);
+      const businessTotal = transactions.filter(t => txInRange(t, range.start, range.end, 'business')).reduce((s,t)=>s+t.amount,0);
+      total = personalTotal + businessTotal;
+      data = [
+        { name: 'ส่วนตัว', amount: personalTotal, color: paletteOverviewModes[0] },
+        { name: 'ธุรกิจ', amount: businessTotal, color: paletteOverviewModes[1] },
+      ].filter(d => d.amount > 0);
+
+      overviewWrap.innerHTML = `
+        <div class="total-card">
+          <div class="total-label">รายจ่ายรวมทั้งหมด</div>
+          <div class="total-number">${fmt(total)} ฿</div>
+          <div class="total-split">
+            <div class="total-split-item">
+              <div class="total-split-label">🏠 ส่วนตัว</div>
+              <div class="total-split-amt">${fmt(personalTotal)} ฿</div>
+            </div>
+            <div class="total-split-item">
+              <div class="total-split-label">💼 ธุรกิจ</div>
+              <div class="total-split-amt">${fmt(businessTotal)} ฿</div>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      overviewWrap.innerHTML = '';
+      const items = transactions.filter(t => txInRange(t, range.start, range.end, currentReportMode));
+      const byCat = {};
+      items.forEach(t => {
+        byCat[t.catId] = (byCat[t.catId] || 0) + t.amount;
+      });
+      const palette = currentReportMode === 'personal' ? palettePersonal : paletteBusiness;
+      data = Object.keys(byCat).map((catId, i) => {
+        const cat = findCategory(currentReportMode, catId);
+        return { name: cat.name, amount: byCat[catId], color: palette[i % palette.length] };
+      }).sort((a,b) => b.amount - a.amount);
+      total = items.reduce((s,t)=>s+t.amount,0);
+    }
+
+    document.getElementById('donutTotal').textContent = fmt(total) + ' ฿';
+    document.getElementById('donutTotalLabel').textContent =
+      currentReportMode === 'overview' ? 'รวมทั้งหมด' :
+      (currentReportPeriod === 'month' ? 'รวมเดือนนี้' : currentReportPeriod === 'week' ? 'รวมสัปดาห์นี้' : 'รวมปีนี้');
+
+    const svg = document.getElementById('donutSvg');
+    const cx = 95, cy = 95, r = 75, stroke = 26;
+    const circumference = 2 * Math.PI * r;
+    let offset = 0;
+    let paths = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#F4F0E9" stroke-width="${stroke}"/>`;
+    if (total > 0) {
+      data.forEach(d => {
+        const frac = d.amount / total;
+        const len = frac * circumference;
+        paths += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${d.color}" stroke-width="${stroke}"
+          stroke-dasharray="${len} ${circumference - len}"
+          stroke-dashoffset="${-offset}"
+          transform="rotate(-90 ${cx} ${cy})" stroke-linecap="butt"/>`;
+        offset += len;
+      });
+    }
+    svg.innerHTML = paths;
+
+    const legend = document.getElementById('legendList');
+    legend.innerHTML = '';
+    if (data.length === 0) {
+      legend.innerHTML = '<div class="empty-state">ไม่มีรายจ่ายในช่วงนี้</div>';
+    } else {
+      data.forEach(d => {
+        const pct = total > 0 ? Math.round((d.amount / total) * 100) : 0;
+        const row = document.createElement('div');
+        row.className = 'legend-item';
+        row.innerHTML = `
+          <div class="legend-dot" style="background:${d.color}"></div>
+          <div class="legend-name">${d.name}</div>
+          <div class="legend-pct">${pct}%</div>
+          <div class="legend-amt">${fmt(d.amount)} ฿</div>
+        `;
+        legend.appendChild(row);
+      });
+    }
+
+    renderTrendChart();
+  }
+
+  function renderTrendChart() {
+    const chart = document.getElementById('barChart');
+    const trendLabel = document.getElementById('trendLabel');
+    chart.innerHTML = '';
+    const modeFilter = currentReportMode === 'overview' ? null : currentReportMode;
+
+    let buckets = [];
+
+    if (currentReportPeriod === 'week') {
+      trendLabel.textContent = 'แนวโน้ม 7 วันของสัปดาห์นี้';
+      const range = getPeriodRange('week', periodOffset);
+      const days = ['จ','อ','พ','พฤ','ศ','ส','อา'];
+      for (let i = 0; i < 7; i++) {
+        const dayStart = new Date(range.start); dayStart.setDate(dayStart.getDate() + i);
+        const dayEnd = new Date(dayStart); dayEnd.setDate(dayEnd.getDate() + 1);
+        const amt = transactions.filter(t => {
+          const d = new Date(t.date);
+          if (d < dayStart || d >= dayEnd) return false;
+          if (modeFilter && t.mode !== modeFilter) return false;
+          return true;
+        }).reduce((s,t)=>s+t.amount,0);
+        const isCurrent = dayStart.toDateString() === NOW.toDateString();
+        buckets.push({ label: days[i], amount: amt, isCurrent });
+      }
+    } else if (currentReportPeriod === 'month') {
+      trendLabel.textContent = 'แนวโน้มรายสัปดาห์ของเดือนนี้';
+      const range = getPeriodRange('month', periodOffset);
+      let weekStart = startOfWeek(range.start);
+      let wIdx = 1;
+      while (weekStart < range.end) {
+        const weekEnd = new Date(weekStart); weekEnd.setDate(weekEnd.getDate() + 7);
+        const amt = transactions.filter(t => {
+          const d = new Date(t.date);
+          if (d < weekStart || d >= weekEnd || d < range.start || d >= range.end) return false;
+          if (modeFilter && t.mode !== modeFilter) return false;
+          return true;
+        }).reduce((s,t)=>s+t.amount,0);
+        const isCurrent = NOW >= weekStart && NOW < weekEnd;
+        buckets.push({ label: 'สัปดาห์ ' + wIdx, amount: amt, isCurrent });
+        weekStart = weekEnd;
+        wIdx++;
+      }
+    } else {
+      trendLabel.textContent = 'แนวโน้มรายเดือนของปีนี้';
+      const range = getPeriodRange('year', periodOffset);
+      const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+      for (let m = 0; m < 12; m++) {
+        const mStart = new Date(range.start.getFullYear(), m, 1);
+        const mEnd = new Date(range.start.getFullYear(), m + 1, 1);
+        const amt = transactions.filter(t => {
+          const d = new Date(t.date);
+          if (d < mStart || d >= mEnd) return false;
+          if (modeFilter && t.mode !== modeFilter) return false;
+          return true;
+        }).reduce((s,t)=>s+t.amount,0);
+        const isCurrent = NOW.getFullYear() === range.start.getFullYear() && NOW.getMonth() === m;
+        buckets.push({ label: months[m], amount: amt, isCurrent });
+      }
+    }
+
+    const max = Math.max(...buckets.map(b => b.amount), 1);
+    buckets.forEach(b => {
+      const h = Math.max(4, Math.round((b.amount / max) * 90));
+      const col = document.createElement('div');
+      col.className = 'bar-col';
+      col.innerHTML = `
+        <div class="bar-track"><div class="bar-fill ${b.isCurrent ? 'today' : ''}" style="height:${h}px"></div></div>
+        <div class="bar-day">${b.label}</div>
+      `;
+      chart.appendChild(col);
+    });
+  }
+
+  function updateBudgetFromInput(mode, value) {
+    const num = parseFloat(value.replace(/[^\d.]/g, ''));
+    if (!isNaN(num) && num > 0) {
+      budgets[mode].total = num;
+      persistChange();
+      renderBudget();
+    }
+    const input = document.getElementById(mode === 'personal' ? 'budgetInputPersonal' : 'budgetInputBusiness');
+    input.value = fmt(budgets[mode].total) + ' ฿';
+  }
+
+  // ===== EXPORT MODAL =====
+  const thMonths = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+
+  function openExportModal() {
+    populateExportPickers();
+    document.getElementById('exportModal').classList.add('show');
+  }
+  function closeExportModal() {
+    document.getElementById('exportModal').classList.remove('show');
+  }
+
+  function populateExportPickers() {
+    const years = Array.from(new Set(transactions.map(t => new Date(t.date).getFullYear()))).sort((a,b)=>b-a);
+    if (years.length === 0) years.push(NOW.getFullYear());
+
+    const monthSel = document.getElementById('exportMonthSelect');
+    if (!monthSel.dataset.filled) {
+      monthSel.innerHTML = thMonths.map((m, i) => `<option value="${i}">${m}</option>`).join('');
+      monthSel.value = NOW.getMonth();
+      monthSel.dataset.filled = '1';
+    }
+    const monthYearSel = document.getElementById('exportMonthYearSelect');
+    monthYearSel.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
+    monthYearSel.value = NOW.getFullYear();
+
+    const yearSel = document.getElementById('exportYearSelect');
+    yearSel.innerHTML = years.map(y => `<option value="${y}">ปี ${y}</option>`).join('');
+    yearSel.value = NOW.getFullYear();
+  }
+
+  function onExportRangeChange() {
+    const val = document.querySelector('input[name="exportRange"]:checked').value;
+    document.getElementById('monthPicker').style.display = val === 'month' ? 'flex' : 'none';
+    document.getElementById('yearPicker').style.display = val === 'year' ? 'flex' : 'none';
+  }
+
+  function getExportFilteredTransactions() {
+    const val = document.querySelector('input[name="exportRange"]:checked').value;
+    let items = transactions.slice();
+    let rangeLabel = 'ทั้งหมด';
+
+    if (val === 'month') {
+      const m = parseInt(document.getElementById('exportMonthSelect').value);
+      const y = parseInt(document.getElementById('exportMonthYearSelect').value);
+      items = items.filter(t => {
+        const d = new Date(t.date);
+        return d.getFullYear() === y && d.getMonth() === m;
+      });
+      rangeLabel = `${thMonths[m]} ${y}`;
+    } else if (val === 'year') {
+      const y = parseInt(document.getElementById('exportYearSelect').value);
+      items = items.filter(t => new Date(t.date).getFullYear() === y);
+      rangeLabel = `ปี ${y}`;
+    }
+    return { items: items.sort((a,b) => new Date(a.date) - new Date(b.date)), rangeLabel, rangeKey: val };
+  }
+
+  function runExport(kind) {
+    const { items, rangeLabel } = getExportFilteredTransactions();
+    if (items.length === 0) {
+      alert('ไม่มีรายการในช่วงเวลาที่เลือก');
+      return;
+    }
+    if (kind === 'js') {
+      exportToExcelJS(items, rangeLabel);
+    } else {
+      exportToExcelPython(items, rangeLabel);
+    }
+  }
+
+  function buildSheetRows(items) {
+    return items.map(t => {
+      const cat = findCategory(t.mode, t.catId);
+      const d = new Date(t.date);
+      return {
+        'วันที่': d.toLocaleDateString('th-TH', { year: 'numeric', month: '2-digit', day: '2-digit' }),
+        'เวลา': d.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }),
+        'ประเภทหลัก': modeLabel(t.mode),
+        'หมวดหมู่': cat.name,
+        'โน้ต': t.note || '',
+        'จำนวนเงิน (บาท)': t.amount,
+      };
+    });
+  }
+
+  // ----- Export path 1: instant client-side (SheetJS), pie rendered as image -----
+  function exportToExcelJS(items, rangeLabel) {
+    const wb = XLSX.utils.book_new();
+
+    // สรุป sheet
+    const personalTotal = items.filter(t => t.mode === 'personal').reduce((s,t)=>s+t.amount,0);
+    const businessTotal = items.filter(t => t.mode === 'business').reduce((s,t)=>s+t.amount,0);
+    const summaryRows = [
+      { 'รายการ': 'ช่วงเวลา', 'จำนวนเงิน (บาท)': rangeLabel },
+      { 'รายการ': 'รวมรายจ่าย - ส่วนตัว', 'จำนวนเงิน (บาท)': personalTotal },
+      { 'รายการ': 'รวมรายจ่าย - ธุรกิจ', 'จำนวนเงิน (บาท)': businessTotal },
+      { 'รายการ': 'รวมรายจ่ายทั้งหมด', 'จำนวนเงิน (บาท)': personalTotal + businessTotal },
+    ];
+    const wsSummary = XLSX.utils.json_to_sheet(summaryRows, { skipHeader: false });
+    wsSummary['!cols'] = [{ wch: 28 }, { wch: 18 }];
+    XLSX.utils.book_append_sheet(wb, wsSummary, 'สรุป');
+
+    // Personal / Business sheets with category subtotal table (no native chart possible via SheetJS)
+    ['personal', 'business'].forEach(mode => {
+      const modeItems = items.filter(t => t.mode === mode);
+      const byCat = {};
+      modeItems.forEach(t => { byCat[t.catId] = (byCat[t.catId] || 0) + t.amount; });
+      const catRows = Object.keys(byCat).map(catId => ({
+        'หมวดหมู่': findCategory(mode, catId).name,
+        'จำนวนเงิน (บาท)': byCat[catId]
+      })).sort((a,b) => b['จำนวนเงิน (บาท)'] - a['จำนวนเงิน (บาท)']);
+
+      const detailRows = buildSheetRows(modeItems);
+      const ws = XLSX.utils.json_to_sheet(catRows);
+      XLSX.utils.sheet_add_json(ws, [{}], { origin: -1, skipHeader: true });
+      XLSX.utils.sheet_add_json(ws, detailRows, { origin: -1 });
+      ws['!cols'] = [{ wch: 22 }, { wch: 16 }, { wch: 8 }, { wch: 12 }, { wch: 28 }, { wch: 16 }];
+      XLSX.utils.book_append_sheet(wb, ws, mode === 'personal' ? 'ส่วนตัว' : 'ธุรกิจ');
+    });
+
+    // รวม sheet
+    const wsAll = XLSX.utils.json_to_sheet(buildSheetRows(items));
+    wsAll['!cols'] = [{ wch: 12 }, { wch: 8 }, { wch: 12 }, { wch: 20 }, { wch: 28 }, { wch: 16 }];
+    XLSX.utils.book_append_sheet(wb, wsAll, 'รวมทั้งหมด');
+
+    XLSX.writeFile(wb, `รายจ่าย-${rangeLabel.replace(/\s/g,'')}-instant.xlsx`);
+    closeExportModal();
+    showExportToast('ดาวน์โหลดแล้ว — กราฟวงกลมในชีทนี้เป็นตารางสรุป ไม่ใช่กราฟภาพ (SheetJS สร้างกราฟจริงไม่ได้)');
+  }
+
+  // ----- Export path 2: "native chart" demo handoff -----
+  // A static HTML file cannot run Python/openpyxl at runtime. This path packages
+  // the filtered data and explains that Claude generates the real .xlsx with
+  // native, editable pie charts on the backend (as shown in the sample file).
+  function exportToExcelPython(items, rangeLabel) {
+    const payload = {
+      rangeLabel,
+      generatedNote: 'ไฟล์ตัวอย่างที่มีกราฟวงกลมจริงของ Excel ถูกสร้างไว้แล้วโดย Claude (ดูไฟล์ที่ส่งมาในแชท) — เวอร์ชันที่ใช้งานจริงจะต้องเชื่อมต่อกับเซิร์ฟเวอร์ที่รัน Python/openpyxl เพื่อสร้างไฟล์แบบนี้จากข้อมูลของคุณโดยอัตโนมัติ',
+      transactionCount: items.length,
+    };
+    closeExportModal();
+    showExportToast(`เตรียมข้อมูลช่วง "${rangeLabel}" (${items.length} รายการ) แล้ว — ดูตัวอย่างไฟล์กราฟวงกลมจริงที่ Claude ส่งมาให้ในแชทได้เลย`);
+    console.log('Data prepared for native-chart export:', payload, items);
+  }
+
+  function showExportToast(msg) {
+    const toast = document.getElementById('exportToast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 6000);
+  }
+
+  // ===== CLOUD AUTH + GOOGLE SHEETS AS SOURCE OF TRUTH =====
+  // The app now requires Google Sign-In before showing any screen. Once signed
+  // in, all expense data lives in a Google Sheet owned by the user (not on any
+  // Anthropic or third-party server) and is read/written directly from this
+  // page via the Sheets API. localStorage is kept only as an offline cache so
+  // the app still works without a connection; it resyncs on reconnect.
+  const SHEETS_SCOPE = 'https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile';
+  const STORAGE_KEY_GCLIENTID = 'jod_gclientid_v1';
+  const STORAGE_KEY_GSHEETID = 'jod_gsheetid_v1';
+  const STORAGE_KEY_GLASTSYNC = 'jod_glastsync_v1';
+  const STORAGE_KEY_LASTAUTH = 'jod_lastauth_v1';
+  const SESSION_MAX_IDLE_DAYS = 30;
+
+  // ── Shared Storage Layer ──────────────────────────────────────────────────
+  // iOS Safari creates a completely separate localStorage for Home Screen
+  // apps (standalone mode) vs browser tabs — so settings saved in Safari
+  // are invisible when the app is opened from the Home Screen icon and vice
+  // versa. The Cache API is the only storage that IS shared between both
+  // contexts on iOS. We write every setting to both Cache API and
+  // localStorage so it is accessible regardless of how the app is opened.
+  // Reads prefer Cache API, then fall back to localStorage.
+  const CACHE_STORE = 'jod-settings-v1';
+  const CACHE_PREFIX = 'https://jod-app.local/settings/';
+
+  async function storeSet(key, value) {
+    const strVal = String(value === null || value === undefined ? '' : value);
+    try { localStorage.setItem(key, strVal); } catch(e) {}
+    try {
+      const cache = await caches.open(CACHE_STORE);
+      await cache.put(CACHE_PREFIX + key, new Response(strVal));
+    } catch(e) {}
+  }
+
+  async function storeGet(key) {
+    try {
+      const cache = await caches.open(CACHE_STORE);
+      const res = await cache.match(CACHE_PREFIX + key);
+      if (res) {
+        const val = await res.text();
+        if (val !== '') return val;
+      }
+    } catch(e) {}
+    try {
+      const val = localStorage.getItem(key);
+      if (val !== null && val !== '') return val;
+    } catch(e) {}
+    return null;
+  }
+
+  async function storeRemove(key) {
+    try { localStorage.removeItem(key); } catch(e) {}
+    try {
+      const cache = await caches.open(CACHE_STORE);
+      await cache.delete(CACHE_PREFIX + key);
+    } catch(e) {}
+  }
+  // ─────────────────────────────────────────────────────────────────────────
+
+  let gTokenClient = null;
+  let gAccessToken = null;
+  let gSheetId = null; // populated async in startApp()
+  let gUserProfile = null;
+  let isOnline = navigator.onLine;
+  let pendingSync = false;
+
+  window.addEventListener('online', () => { isOnline = true; if (pendingSync) syncToGoogleSheet(); });
+  window.addEventListener('offline', () => { isOnline = false; });
+
+  function daysSince(isoDate) {
+    if (!isoDate) return Infinity;
+    return (Date.now() - new Date(isoDate).getTime()) / 86400000;
+  }
+
+  async function startApp() {
+    // Must use async storeGet (Cache API + localStorage) so that settings
+    // saved from Safari browser are visible when the app runs in iOS
+    // standalone (Home Screen) mode, which has a separate localStorage.
+    gSheetId = await storeGet(STORAGE_KEY_GSHEETID) || null;
+    lastKnownNonEmptySync = parseInt(await storeGet('jod_last_nonempty_count') || '0', 10);
+
+    const savedClientId = await storeGet(STORAGE_KEY_GCLIENTID);
+    if (!savedClientId) {
+      goToAuthScreen('login');
+      document.getElementById('loginClientIdSetup').style.display = 'block';
+      document.getElementById('loginSignInArea').style.display = 'none';
+      return;
+    }
+    document.getElementById('loginClientIdInput').value = savedClientId;
+    document.getElementById('loginClientIdSetup').style.display = 'none';
+    document.getElementById('loginSignInArea').style.display = 'block';
+    setupGoogleTokenClient(savedClientId);
+
+    const lastAuth = await storeGet(STORAGE_KEY_LASTAUTH);
+    if (lastAuth && daysSince(lastAuth) < SESSION_MAX_IDLE_DAYS) {
+      attemptSilentSignIn();
+    } else {
+      goToAuthScreen('login');
+    }
+  }
+
+  let loadingWatchdogTimer = null;
+
+  async function saveLoginClientId() {
+    const val = document.getElementById('loginClientIdInput').value.trim();
+    if (!val || !val.endsWith('.apps.googleusercontent.com')) {
+      alert('Client ID ไม่ถูกต้อง ควรลงท้ายด้วย .apps.googleusercontent.com');
+      return;
+    }
+    await storeSet(STORAGE_KEY_GCLIENTID, val);
+    document.getElementById('loginClientIdSetup').style.display = 'none';
+    document.getElementById('loginSignInArea').style.display = 'block';
+    setupGoogleTokenClient(val);
+  }
+
+  async function resetLoginClientId() {
+    if (!confirm('เปลี่ยน Client ID? คุณจะต้องเข้าสู่ระบบใหม่')) return;
+    await storeRemove(STORAGE_KEY_GCLIENTID);
+    await storeRemove(STORAGE_KEY_LASTAUTH);
+    document.getElementById('loginClientIdSetup').style.display = 'block';
+    document.getElementById('loginSignInArea').style.display = 'none';
+    document.getElementById('loginClientIdInput').value = '';
+  }
+
+  function setupGoogleTokenClient(clientId, retriesLeft) {
+    if (retriesLeft === undefined) retriesLeft = 15; // ~6 seconds total at 400ms intervals
+    if (typeof google === 'undefined' || !google.accounts) {
+      if (retriesLeft <= 0) {
+        showLoginError('โหลดระบบเข้าสู่ระบบของ Google ไม่สำเร็จ — ตรวจสอบอินเทอร์เน็ตแล้วลองรีเฟรชหน้านี้');
+        goToAuthScreen('login');
+        return;
+      }
+      setTimeout(() => setupGoogleTokenClient(clientId, retriesLeft - 1), 400);
+      return;
+    }
+    gTokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: clientId,
+      scope: SHEETS_SCOPE,
+      callback: handleAuthResponse,
+      error_callback: (err) => {
+        showLoginError(err && err.type === 'popup_closed' ? 'ปิดหน้าต่างเข้าสู่ระบบก่อนเสร็จสิ้น' : 'เข้าสู่ระบบไม่สำเร็จ');
+        goToAuthScreen('login');
+      }
+    });
+  }
+
+  function attemptSilentSignIn(retriesLeft) {
+    if (retriesLeft === undefined) retriesLeft = 15; // ~6 seconds total
+    goToAuthScreen('loading');
+    if (!gTokenClient) {
+      if (retriesLeft <= 0) {
+        goToAuthScreen('login');
+        return;
+      }
+      setTimeout(() => attemptSilentSignIn(retriesLeft - 1), 400);
+      return;
+    }
+    gTokenClient.requestAccessToken({ prompt: '' });
+  }
+
+  function signInWithGoogle() {
+    if (!gTokenClient) {
+      showLoginError('ระบบยังโหลดไม่เสร็จ กรุณารอสักครู่แล้วลองใหม่');
+      return;
+    }
+    goToAuthScreen('loading');
+    gTokenClient.requestAccessToken({ prompt: 'consent' });
+  }
+
+  async function handleAuthResponse(resp) {
+    if (resp.error) {
+      showLoginError('เข้าสู่ระบบไม่สำเร็จ: ' + resp.error);
+      goToAuthScreen('login');
+      return;
+    }
+    gAccessToken = resp.access_token;
+    await storeSet(STORAGE_KEY_LASTAUTH, new Date().toISOString());
+    setLoadingStatus('กำลังโหลดข้อมูลบัญชี...');
+    try {
+      await fetchUserProfile();
+      setLoadingStatus('กำลังเตรียม Google Sheet...');
+      await ensureSheetExists();
+      setLoadingStatus('กำลังโหลดข้อมูลรายจ่าย...');
+      await loadFromSheet();
+      enterApp();
+    } catch (e) {
+      if (e.kind === 'auth') {
+        // Real auth failure — the access token itself is invalid, nothing to
+        // recover from here, must go back to login.
+        showLoginError('เซสชันหมดอายุ กรุณาเข้าสู่ระบบใหม่');
+        gAccessToken = null;
+        goToAuthScreen('login');
+        return;
+      }
+      // Timeout / network / generic API error while confirming or reading the
+      // sheet: do NOT treat this as "no data". Fall back to whatever was last
+      // cached locally and let the person keep using the app. The next
+      // successful sync will reconcile with the real sheet.
+      await loadFromLocalCache();
+      pendingSync = true;
+      enterApp();
+      setSyncStatus('เชื่อมต่อ Google Sheet ไม่สำเร็จ — ใช้ข้อมูลที่บันทึกไว้ในเครื่องแทน จะลองซิงค์ใหม่ให้เมื่อกลับมามีเน็ต');
+      showGsheetToast('เชื่อมต่อ Google Sheet ไม่สำเร็จ (' + e.message + ') กำลังใช้ข้อมูลสำรองในเครื่องแทน');
+    }
+  }
+
+  function setLoadingStatus(msg) {
+    const el = document.getElementById('loadingStatusText');
+    if (el) el.textContent = msg;
+  }
+
+  function showLoginError(msg) {
+    const el = document.getElementById('loginErrorMsg');
+    el.textContent = msg;
+    el.style.display = 'block';
+  }
+
+  async function fetchUserProfile() {
+    const profile = await googleApiFetch('https://www.googleapis.com/oauth2/v3/userinfo');
+    gUserProfile = profile;
+    document.getElementById('accountEmail').textContent = profile.email || '-';
+    const avatar = document.getElementById('accountAvatar');
+    if (profile.picture) {
+      avatar.innerHTML = `<img src="${profile.picture}" style="width:100%;height:100%;object-fit:cover;">`;
+    } else {
+      avatar.textContent = (profile.email || '?').charAt(0).toUpperCase();
+    }
+  }
+
+  let appEntered = false;
+
+  function enterApp() {
+    appEntered = true;
+    if (loadingWatchdogTimer) { clearTimeout(loadingWatchdogTimer); loadingWatchdogTimer = null; }
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen-home').classList.add('active');
+    document.getElementById('nav-home').classList.add('active');
+    // Defer renders by one frame so the browser completes the screen-transition
+    // paint before populating the grid and recents list. This fixes a bug where
+    // category buttons and recent-list items were invisible on first open.
+    requestAnimationFrame(() => {
+      renderCategories();
+      renderRecents();
+      renderBudget();
+      document.getElementById('budgetInputPersonal').value = fmt(budgets.personal.total) + ' ฿';
+      document.getElementById('budgetInputBusiness').value = fmt(budgets.business.total) + ' ฿';
+    });
+  }
+
+  function goToAuthScreen(which) {
+    // Do nothing if the app is already open — prevents races where a delayed
+    // auth callback tries to show the login screen after the home screen has
+    // already been entered.
+    if (appEntered) return;
+
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(which === 'loading' ? 'screen-loading' : 'screen-login').classList.add('active');
+
+    if (loadingWatchdogTimer) { clearTimeout(loadingWatchdogTimer); loadingWatchdogTimer = null; }
+    const stuckLink = document.getElementById('loadingStuckLink');
+    if (stuckLink) stuckLink.style.display = 'none';
+
+    if (which === 'loading') {
+      setLoadingStatus('กำลังตรวจสอบสถานะเข้าสู่ระบบ...');
+      loadingWatchdogTimer = setTimeout(() => {
+        if (stuckLink) stuckLink.style.display = 'block';
+      }, 8000);
+    }
+  }
+
+  function abortToLogin() {
+    if (loadingWatchdogTimer) { clearTimeout(loadingWatchdogTimer); loadingWatchdogTimer = null; }
+    goToAuthScreen('login');
+  }
+
+  async function signOutGoogle() {
+    appEntered = false; // allow auth screens to show again after logout
+    if (gAccessToken && typeof google !== 'undefined' && google.accounts && google.accounts.oauth2) {
+      google.accounts.oauth2.revoke(gAccessToken, () => {});
+    }
+    gAccessToken = null;
+    gUserProfile = null;
+    await storeRemove(STORAGE_KEY_LASTAUTH);
+    goToAuthScreen('login');
+  }
+
+  async function googleApiFetch(url, options = {}, timeoutMs = 12000) {
+    if (!gAccessToken) throw new Error('ยังไม่ได้เข้าสู่ระบบ');
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    let res;
+    try {
+      res = await fetch(url, {
+        ...options,
+        signal: controller.signal,
+        headers: { ...(options.headers || {}), Authorization: 'Bearer ' + gAccessToken },
+      });
+    } catch (e) {
+      clearTimeout(timer);
+      if (e.name === 'AbortError') {
+        const err = new Error('การเชื่อมต่อช้าเกินไป กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่');
+        err.kind = 'timeout';
+        throw err;
+      }
+      const err = new Error('เชื่อมต่อ Google ไม่ได้: ' + e.message);
+      err.kind = 'network';
+      throw err;
+    }
+    clearTimeout(timer);
+    if (res.status === 401) {
+      gAccessToken = null;
+      const err = new Error('เซสชันหมดอายุ กรุณาเข้าสู่ระบบใหม่');
+      err.kind = 'auth';
+      throw err;
+    }
+    if (res.status === 404) {
+      const err = new Error('ไม่พบไฟล์ที่ระบุ (404)');
+      err.kind = 'not_found';
+      throw err;
+    }
+    if (!res.ok) {
+      const text = await res.text();
+      const err = new Error(`Google API error (${res.status}): ${text.slice(0, 200)}`);
+      err.kind = 'api_error';
+      err.status = res.status;
+      throw err;
+    }
+    return res.json();
+  }
+
+  async function ensureSheetExists() {
+    gSheetId = await storeGet(STORAGE_KEY_GSHEETID) || null;
+    if (gSheetId) {
+      try {
+        await googleApiFetch(`https://sheets.googleapis.com/v4/spreadsheets/${gSheetId}?fields=spreadsheetId`);
+        return; // sheet confirmed to exist — done, never touch it further here
+      } catch (e) {
+        if (e.kind === 'not_found') {
+          // The sheet genuinely no longer exists (deleted from Drive, or the
+          // ID was never valid). This is the ONLY case where creating a new
+          // sheet is safe — any other error (timeout, network, auth, generic
+          // API error) must NOT be treated as "sheet is gone", or a temporary
+          // network hiccup would silently create a duplicate empty sheet and
+          // orphan the real data.
+          console.warn('Google Sheet ไม่พบจริง (404) — จะสร้างไฟล์ใหม่');
+          gSheetId = null;
+        } else {
+          // Re-throw so the caller's catch block shows an error and falls
+          // back to the local cache instead of wiping/recreating anything.
+          throw e;
+        }
+      }
+    }
+    const body = {
+      properties: { title: 'จด - บันทึกรายจ่าย' },
+      sheets: [
+        { properties: { title: 'รายการทั้งหมด' } },
+        { properties: { title: 'สรุป' } },
+        { properties: { title: '_meta' } },
+      ],
+    };
+    const created = await googleApiFetch('https://sheets.googleapis.com/v4/spreadsheets', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    gSheetId = created.spreadsheetId;
+    await storeSet(STORAGE_KEY_GSHEETID, gSheetId);
+    await writeSheetValues('_meta', [['key', 'value'], ['budget_personal', String(budgets.personal.total)], ['budget_business', String(budgets.business.total)], ['next_id', String(nextId)]]);
+    await writeSheetValues('รายการทั้งหมด', [['id', 'mode', 'catId', 'note', 'amount', 'date']]);
+  }
+
+  async function writeSheetValues(sheetName, rows) {
+    await googleApiFetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${gSheetId}/values/${encodeURIComponent(sheetName)}!A1:clear`,
+      { method: 'POST' }
+    );
+    await googleApiFetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${gSheetId}/values/${encodeURIComponent(sheetName)}!A1?valueInputOption=RAW`,
+      { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ values: rows }) }
+    );
+  }
+
+  async function readSheetValues(sheetName) {
+    const res = await googleApiFetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${gSheetId}/values/${encodeURIComponent(sheetName)}`
+    );
+    return res.values || [];
+  }
+
+  async function loadFromSheet() {
+    setSyncStatus('กำลังโหลดข้อมูล...');
+    try {
+      const rawRows = await readSheetValues('รายการทั้งหมด');
+      const dataRows = rawRows.slice(1);
+      transactions = dataRows
+        .filter(r => r.length >= 6 && r[0])
+        .map(r => ({ id: r[0], mode: r[1], catId: r[2], note: r[3] || '', amount: parseFloat(r[4]) || 0, date: r[5] }));
+
+      const metaRows = await readSheetValues('_meta');
+      const meta = {};
+      metaRows.slice(1).forEach(r => { if (r[0]) meta[r[0]] = r[1]; });
+      if (meta.budget_personal) budgets.personal.total = parseFloat(meta.budget_personal) || budgets.personal.total;
+      if (meta.budget_business) budgets.business.total = parseFloat(meta.budget_business) || budgets.business.total;
+      if (meta.next_id) nextId = parseInt(meta.next_id, 10) || nextId;
+      else nextId = computeNextIdFromTransactions();
+
+      await saveToLocalCache();
+      if (transactions.length > 0) {
+        lastKnownNonEmptySync = transactions.length;
+        await storeSet('jod_last_nonempty_count', String(lastKnownNonEmptySync));
+      }
+      const nowIso = new Date().toISOString();
+      await storeSet(STORAGE_KEY_GLASTSYNC, nowIso);
+      setSyncStatus('ซิงค์แล้ว · ' + new Date(nowIso).toLocaleTimeString('th-TH'));
+    } catch (e) {
+      await loadFromLocalCache();
+      setSyncStatus('โหลดจากคลาวด์ไม่สำเร็จ ใช้ข้อมูลที่บันทึกไว้ในเครื่องแทน');
+    }
+  }
+
+  function computeNextIdFromTransactions() {
+    let max = 0;
+    transactions.forEach(t => {
+      const n = parseInt(String(t.id).replace(/[^0-9]/g, ''), 10);
+      if (!isNaN(n) && n > max) max = n;
+    });
+    return max + 1;
+  }
+
+  function setSyncStatus(msg) {
+    const el = document.getElementById('syncStatusLabel');
+    if (el) el.textContent = msg;
+  }
+
+  // localStorage is used only as an offline-readable cache, mirroring whatever
+  // was last successfully synced from the Sheet — never the source of truth.
+  async function saveToLocalCache() {
+    try {
+      await storeSet('jod_cache_transactions', JSON.stringify(transactions));
+      await storeSet('jod_cache_budgets', JSON.stringify(budgets));
+      await storeSet('jod_cache_nextid', String(nextId));
+    } catch (e) { /* ignore cache failures */ }
+  }
+
+  async function loadFromLocalCache() {
+    try {
+      const tx = await storeGet('jod_cache_transactions');
+      const b = await storeGet('jod_cache_budgets');
+      const n = await storeGet('jod_cache_nextid');
+      if (tx) transactions = JSON.parse(tx);
+      if (b) {
+        const parsed = JSON.parse(b);
+        if (parsed.personal) budgets.personal.total = parsed.personal.total;
+        if (parsed.business) budgets.business.total = parsed.business.total;
+      }
+      if (n) nextId = parseInt(n, 10);
+    } catch (e) { /* keep whatever is already in memory */ }
+  }
+
+  let lastKnownNonEmptySync = 0; // loaded from shared storage in startApp()
+
+  async function syncToGoogleSheet(manual) {
+    if (!gAccessToken || !gSheetId) return;
+    if (!isOnline) {
+      pendingSync = true;
+      setSyncStatus('ออฟไลน์ — จะซิงค์อัตโนมัติเมื่อกลับมามีเน็ต');
+      if (manual) showGsheetToast('ไม่มีอินเทอร์เน็ต ข้อมูลจะซิงค์ให้เองเมื่อกลับมาออนไลน์');
+      return;
+    }
+    // Safety guard: if we're about to push zero transactions, but we have
+    // previously confirmed there were real transactions on this device,
+    // refuse to sync. A sync that overwrites the sheet with an empty list is
+    // exactly the failure mode that caused real data loss before — it's far
+    // safer to skip a sync than to risk wiping the cloud copy because the
+    // in-memory array happened to be empty for some transient reason
+    // (e.g. a render ran before data finished loading).
+    if (transactions.length === 0 && lastKnownNonEmptySync > 0) {
+      setSyncStatus('ข้ามการซิงค์ — ตรวจพบว่าข้อมูลในเครื่องตอนนี้ว่างเปล่าผิดปกติ เพื่อความปลอดภัยจะไม่เขียนทับ Google Sheet');
+      if (manual) showGsheetToast('ไม่ซิงค์ เพราะข้อมูลในเครื่องว่างเปล่าผิดปกติ — ป้องกันไม่ให้ข้อมูลบน Google Sheet ถูกลบโดยไม่ตั้งใจ ลองรีเฟรชหน้าแอปก่อนลองใหม่');
+      return;
+    }
+    try {
+      setSyncStatus('กำลังซิงค์...');
+      const sortedTx = transactions.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+      const detailRows = [
+        ['id', 'mode', 'catId', 'note', 'amount', 'date'],
+        ...sortedTx.map(t => [t.id, t.mode, t.catId, t.note || '', t.amount, t.date]),
+      ];
+      await writeSheetValues('รายการทั้งหมด', detailRows);
+
+      const personalTotal = transactions.filter(t => t.mode === 'personal').reduce((s, t) => s + t.amount, 0);
+      const businessTotal = transactions.filter(t => t.mode === 'business').reduce((s, t) => s + t.amount, 0);
+      await writeSheetValues('สรุป', [
+        ['รายการ', 'จำนวนเงิน (บาท)'],
+        ['รวมรายจ่าย - ส่วนตัว', personalTotal],
+        ['รวมรายจ่าย - ธุรกิจ', businessTotal],
+        ['รวมรายจ่ายทั้งหมด', personalTotal + businessTotal],
+        ['ซิงค์ล่าสุด', new Date().toLocaleString('th-TH')],
+      ]);
+
+      await writeSheetValues('_meta', [
+        ['key', 'value'],
+        ['budget_personal', String(budgets.personal.total)],
+        ['budget_business', String(budgets.business.total)],
+        ['next_id', String(nextId)],
+      ]);
+
+      await saveToLocalCache();
+      if (transactions.length > 0) {
+        lastKnownNonEmptySync = transactions.length;
+        await storeSet('jod_last_nonempty_count', String(lastKnownNonEmptySync));
+      }
+      pendingSync = false;
+      const nowIso = new Date().toISOString();
+      await storeSet(STORAGE_KEY_GLASTSYNC, nowIso);
+      setSyncStatus('ซิงค์แล้ว · ' + new Date(nowIso).toLocaleTimeString('th-TH'));
+      if (manual) showGsheetToast('ซิงค์สำเร็จ');
+    } catch (e) {
+      setSyncStatus('ซิงค์ไม่สำเร็จ — บันทึกไว้ในเครื่องแล้ว จะลองใหม่');
+      await saveToLocalCache();
+      pendingSync = true;
+      if (manual) showGsheetToast('ซิงค์ไม่สำเร็จ: ' + e.message);
+    }
+  }
+
+  function showGsheetToast(msg) {
+    const toast = document.getElementById('gsheetToast');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 5000);
+  }
+
+  // Every mutation calls this instead of the old saveToStorage(): write to the
+  // local cache immediately (so the UI never blocks on the network) and kick
+  // off a sync in the background.
+  async function persistChange() {
+    await saveToLocalCache();
+    syncToGoogleSheet();
+  }
+
+  startApp();
+</script>
+
+</body>
+</html>
