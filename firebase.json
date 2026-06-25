@@ -1,26 +1,16 @@
-name: Deploy to Firebase Hosting
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - run: npm install -g firebase-tools
-
-      - name: Write service account key
-        run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > /tmp/sa.json
-
-      - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting --project jod-expense-b67f5 --non-interactive
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: /tmp/sa.json
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".github/**",
+      "SETUP-GUIDE.md"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
